@@ -1,0 +1,5 @@
+base: affordpose_main.yaml
+experiment_name: ablation_no_confidence
+ablation:
+  use_confidence_score: false
+

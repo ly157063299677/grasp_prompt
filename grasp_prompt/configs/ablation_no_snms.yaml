@@ -1,0 +1,5 @@
+base: affordpose_main.yaml
+experiment_name: ablation_no_snms
+ablation:
+  use_spatial_nms: false
+

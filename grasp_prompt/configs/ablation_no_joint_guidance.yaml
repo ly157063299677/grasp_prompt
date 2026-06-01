@@ -1,0 +1,5 @@
+base: affordpose_main.yaml
+experiment_name: ablation_no_joint_guidance
+ablation:
+  use_joint_score: false
+

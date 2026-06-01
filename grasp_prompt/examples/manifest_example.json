@@ -1,0 +1,50 @@
+{
+  "part_to_joint": {
+    "path": "metadata/part_to_joint.csv"
+  },
+  "task_to_affordances": {
+    "0": [2, 5],
+    "1": [3]
+  },
+  "samples": [
+    {
+      "split": "train",
+      "object_id": "mug_0001",
+      "category": "mug",
+      "task_id": 0,
+      "source_npz": "raw/mug_0001_grasp_0001.npz"
+    },
+    {
+      "split": "val",
+      "object_id": "bottle_0007",
+      "category": "bottle",
+      "task_id": 1,
+      "arrays": {
+        "object_points": "raw/bottle_0007/object_points.npy",
+        "object_normals": "raw/bottle_0007/object_normals.npy",
+        "affordance_labels": "raw/bottle_0007/affordance_labels.npy",
+        "hand_vertices": {
+          "path": "raw/bottle_0007/hand_mesh.npz",
+          "field": "vertices"
+        },
+        "hand_pose": "raw/bottle_0007/hand_pose.npy",
+        "hand_joints": "raw/bottle_0007/hand_joints.npy",
+        "hand_global": "raw/bottle_0007/hand_global.npy",
+        "hand_object_state": "raw/bottle_0007/hand_object_state.npy"
+      },
+      "hand_part_vertices": {
+        "0": "metadata/part_vertices/thumb.npy",
+        "1": "metadata/part_vertices/index.npy",
+        "2": "metadata/part_vertices/middle.npy",
+        "3": "metadata/part_vertices/ring.npy",
+        "4": "metadata/part_vertices/little.npy",
+        "5": "metadata/part_vertices/palm.npy",
+        "6": "metadata/part_vertices/wrist_chain_a.npy",
+        "7": "metadata/part_vertices/wrist_chain_b.npy"
+      },
+      "contact_threshold": 0.025,
+      "cluster_radius": 0.04,
+      "min_cluster_size": 3
+    }
+  ]
+}

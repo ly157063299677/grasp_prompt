@@ -1,0 +1,25 @@
+base: default.yaml
+
+experiment_name: debug_cpu
+
+data:
+  num_points: 128
+  max_prompts: 8
+  max_regions: 8
+
+model:
+  hidden_dim: 64
+  num_heads: 4
+  diffusion_steps: 20
+  tda_local_k: 3
+
+selector:
+  knn: 8
+
+training:
+  batch_size: 4
+  epochs: 3
+  lr: 0.0005
+  num_workers: 0
+  log_every: 1
+

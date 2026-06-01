@@ -1,0 +1,29 @@
+base: default.yaml
+
+experiment_name: affordpose_main
+
+data:
+  num_points: 2048
+  max_prompts: 32
+  max_regions: 24
+
+model:
+  hidden_dim: 256
+  num_heads: 8
+  diffusion_steps: 200
+  tda_local_k: 8
+
+selector:
+  knn: 24
+  kernel_sigma: 0.06
+  nms_radius: 0.035
+
+training:
+  batch_size: 16
+  epochs: 120
+  lr: 0.0002
+  weight_decay: 0.000001
+  grad_clip_norm: 1.0
+  num_workers: 4
+  log_every: 50
+

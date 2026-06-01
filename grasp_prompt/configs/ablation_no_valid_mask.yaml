@@ -1,0 +1,5 @@
+base: affordpose_main.yaml
+experiment_name: ablation_no_valid_mask
+ablation:
+  use_valid_mask: false
+

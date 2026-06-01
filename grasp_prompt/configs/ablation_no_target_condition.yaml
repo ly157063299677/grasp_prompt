@@ -1,0 +1,5 @@
+base: affordpose_main.yaml
+experiment_name: ablation_no_target_condition
+ablation:
+  use_target_condition: false
+

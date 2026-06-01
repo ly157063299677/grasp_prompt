@@ -1,0 +1,24 @@
+base: affordpose_main.yaml
+
+experiment_name: affordpose_large
+
+data:
+  num_points: 4096
+  max_prompts: 48
+  max_regions: 32
+
+model:
+  hidden_dim: 384
+  num_heads: 8
+  diffusion_steps: 300
+  tda_local_k: 12
+
+selector:
+  knn: 32
+
+training:
+  batch_size: 8
+  epochs: 160
+  lr: 0.00015
+  num_workers: 4
+

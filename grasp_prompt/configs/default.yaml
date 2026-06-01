@@ -1,0 +1,57 @@
+seed: 7
+experiment_name: grasp_prompt_base
+
+data:
+  num_points: 512
+  max_prompts: 16
+  max_regions: 12
+  num_affordance_classes: 32
+  num_contact_parts: 8
+  num_joints: 21
+  hand_pose_dim: 48
+  hand_global_dim: 6
+  hand_object_dim: 12
+  num_tasks: 32
+  # Set this for reported runs, for example: metadata/part_to_joint.csv
+  part_to_joint_path:
+
+model:
+  hidden_dim: 128
+  num_heads: 4
+  num_encoder_layers: 2
+  num_decoder_layers: 2
+  diffusion_steps: 100
+  beta_start: 0.0001
+  beta_end: 0.02
+  tda_local_k: 4
+
+selector:
+  knn: 16
+  kernel_sigma: 0.08
+  alpha: 1.0
+  beta: 1.0
+  gamma: 1.0
+  lambda_penalty: 0.5
+  nms_radius: 0.04
+
+ablation:
+  use_valid_mask: true
+  use_target_condition: true
+  use_tda: true
+  use_cdci: true
+  use_confidence_score: true
+  use_contact_score: true
+  use_joint_score: true
+  use_compensation_penalty: true
+  use_spatial_nms: true
+
+training:
+  batch_size: 8
+  epochs: 50
+  lr: 0.0003
+  weight_decay: 0.000001
+  eta_conf: 1.0
+  eta_part: 1.0
+  grad_clip_norm: 1.0
+  num_workers: 0
+  log_every: 20
